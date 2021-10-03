@@ -1,2 +1,9 @@
 # ronald-poll-backend
-the backend of Ronald Poll
+The Backend of Ronald Poll
+
+
+
+to run:
+```
+npm start
+```
