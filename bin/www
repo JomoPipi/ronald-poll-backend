@@ -3,11 +3,11 @@
 /**
  * Module dependencies.
  */
-var chat = require('../chat');
 var socketio = require('socket.io');
 var app = require('../app');
 var debug = require('debug')('server:server');
 var http = require('http');
+const interactWithUsers = require('../interactWithUsers');
 
 /**
  * Get port from environment and store in Express.
@@ -27,7 +27,7 @@ var io = socketio(server,{
     methods: ['GET', 'POST']
   }
 });
-chat(io);
+interactWithUsers(io);
 /**
  * Listen on provided port, on all network interfaces.
  */
