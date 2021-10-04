@@ -28,7 +28,7 @@ async function getDocument(callback) {
 async function interactWithUsers(io) {
 
   getDocument(mostRecent => {
-    console.log('here: ',mostRecent.responses)
+    
     io.on('connection', (socket) => {
       console.log('a user has connected!!')
       
