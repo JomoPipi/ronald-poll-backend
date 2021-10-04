@@ -58,7 +58,10 @@ class Connection {
 
 function chat(io) {
   io.on('connection', (socket) => {
-    new Connection(io, socket);   
+    // new Connection(io, socket);  
+    socket.on('user-answer', data => {
+      console.log('data =',data)
+    }) 
   });
 };
 
